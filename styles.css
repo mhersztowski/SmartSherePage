@@ -1,0 +1,151 @@
+.root {
+    display: flex;
+}
+
+.sidebar {
+    width: 100px;
+    background-color: #f0f0f0;
+    padding: 20px;
+}
+
+.content {
+    flex-grow: 1;
+    padding: 20px;
+}
+
+.notifications-container {
+    position: fixed;
+    bottom: 100px;
+    right: 0;
+    width: 300px;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    padding: 10px;
+    z-index: 1000; /* Wartość z-indeksu ustala kolejność wyświetlania elementów na stronie */
+}
+
+.notification {
+    margin-bottom: 10px;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.side2-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.side2-device-card {
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    flex: 0 0 calc(25% - 20px);
+    min-width: calc(25% - 20px);
+}
+
+.side2-device-header {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.side2-device-body {
+    font-size: 1rem;
+}
+
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    padding: 8px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.sidebar ul li a {
+    color: #818181;
+    text-decoration: none;
+    font-size: 25px;
+}
+
+.sidebar ul li a:hover {
+    color: #f1f1f1;
+}
+
+.content {
+    transition: margin-left 0.5s;
+    padding: 16px;
+}
+
+.hamburger {
+    font-size: 30px;
+    cursor: pointer;
+}
+
+@media (max-width: 1600px) {
+    .device-card {
+        min-width: calc(25% - 20px);
+    }
+}
+
+@media (max-width: 1024px) {
+    .device-card {
+        /*min-width: calc(33.333% - 20px);*/
+        min-width: calc(25% - 20px);
+    }
+}
+
+@media (max-width: 768px) {
+    .device-card {
+        min-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .device-card {
+        min-width: 100%;
+    }
+}
+
+/*
+@media (max-width: 768px) {
+    .device-card {
+        min-width: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 480px) {
+    .device-card {
+        min-width: 100%;
+    }
+}
+*/
